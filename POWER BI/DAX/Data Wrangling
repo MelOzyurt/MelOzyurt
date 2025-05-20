@@ -1,4 +1,13 @@
 # POWER-BI Projects
+#In this part of my analysis, I created a new column called AgeGroupAtMarriage_Man and  AgeGroupAtMarriage_Woman.
+The idea was to categorize each woman's age at the time of marriage into defined age brackets, like '20-30', '31-40', and so on. 
+Instead of working with exact ages, I wanted to group them so I could better analyze trends and patterns across age ranges.
+This kind of grouping makes it easier to compare insights for example, do women who marry in their 20s experience shorter or longer marriages? 
+Or is there a higher divorce rate in a certain age group? 
+It also helps a lot when building visuals in Power BI, like bar charts or heat maps, where grouped data is much more intuitive and meaningful.
+Ultimately, the goal was to make the data more interpretable both for myself and for any stakeholders who would view the report 
+and to support further analysis, like understanding behavior across different age segments or building predictive models.
+
 
 ## 1. Man Age Group Analysis
 
@@ -14,6 +23,22 @@ IF(
             divorce[AgeAtMarriage_Man] >= 41 && divorce[AgeAtMarriage_Man] <= 50, "41-50",
             IF(
                 divorce[AgeAtMarriage_Man] >= 51 && divorce[AgeAtMarriage_Man] <= 60, "51-60",
+                "60+"
+            )
+        )
+    )
+)
+
+## 2. Woman Age Group Analysis
+AgeGroupAtMarriage_Woman = 
+IF(
+    divorce[AgeAtMarriage_Woman] >= 20 && divorce[AgeAtMarriage_Woman] <= 30, "20-30",
+    IF(
+        divorce[AgeAtMarriage_Woman] >= 31 && divorce[AgeAtMarriage_Woman] <= 40, "31-40",
+        IF(
+            divorce[AgeAtMarriage_Woman] >= 41 && divorce[AgeAtMarriage_Woman] <= 50, "41-50",
+            IF(
+                divorce[AgeAtMarriage_Woman] >= 51 && divorce[AgeAtMarriage_Woman] <= 60, "51-60",
                 "60+"
             )
         )
