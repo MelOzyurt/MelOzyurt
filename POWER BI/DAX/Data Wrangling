@@ -1,0 +1,21 @@
+# POWER-BI Projects
+
+## 1. Man Age Group Analysis
+
+Details about how I grouped man’s age at marriage using DAX:
+
+```DAX
+AgeGroupAtMarriage_Man = 
+IF(
+    divorce[AgeAtMarriage_Man] >= 20 && divorce[AgeAtMarriage_Man] <= 30, "20-30",
+    IF(
+        divorce[AgeAtMarriage_Man] >= 31 && divorce[AgeAtMarriage_Man] <= 40, "31-40",
+        IF(
+            divorce[AgeAtMarriage_Man] >= 41 && divorce[AgeAtMarriage_Man] <= 50, "41-50",
+            IF(
+                divorce[AgeAtMarriage_Man] >= 51 && divorce[AgeAtMarriage_Man] <= 60, "51-60",
+                "60+"
+            )
+        )
+    )
+)
