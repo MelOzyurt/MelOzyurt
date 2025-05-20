@@ -5,6 +5,7 @@
 I'm Mel from the United Kingdom, and I do **Data & Business Analyst** with a passion for transforming data into actionable insights that drive better decision-making. This README showcases my skills, tools, and project highlights in data analytics.
 ---
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=MelOzyurt&hide=contribs,prs)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=transparent)
 ## 🧠 About Me
 
 I'm skilled in using:
